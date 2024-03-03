@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('RIT Central Library',style: TextStyle(fontWeight: FontWeight.bold,color: Colors.white),),
-          backgroundColor: Colors.red
+          backgroundColor: Colors.blueAccent
           ,
         ),
         body: SignInPage(),
@@ -83,7 +83,7 @@ class SignInPage extends StatelessWidget {
                 );
               },
               style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all<Color>(Colors.red),
+                backgroundColor: MaterialStateProperty.all<Color>(Colors.blueAccent),
                 foregroundColor: MaterialStateProperty.all<Color>(Colors.white),
                 shape: MaterialStateProperty.all<OutlinedBorder>(
                   RoundedRectangleBorder(

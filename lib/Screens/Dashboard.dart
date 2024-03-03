@@ -43,7 +43,7 @@ class _DashboardState extends State<Dashboard> {
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.transparent),
                 borderRadius: BorderRadius.circular(0),
-                color: Colors.red
+                color: Colors.blueAccent
               ),
               padding: EdgeInsets.all(20.0),
               child: Column(
@@ -155,7 +155,7 @@ class _DashboardState extends State<Dashboard> {
           ),
         ],
         currentIndex: _selectedIndex, // Current selected index
-        selectedItemColor: Colors.red, // Color for selected tab
+        selectedItemColor: Colors.blueAccent, // Color for selected tab
         unselectedItemColor: Colors.grey, // Color for unselected tab
         onTap: (index) {
           setState(() {

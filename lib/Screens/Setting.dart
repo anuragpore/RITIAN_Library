@@ -51,7 +51,7 @@ class _SettingState extends State<Setting> {
           ),
         ],
         currentIndex: _selectedIndex, // Current selected index
-        selectedItemColor: Colors.red, // Color for selected tab
+        selectedItemColor: Colors.blueAccent, // Color for selected tab
         unselectedItemColor: Colors.grey, // Color for unselected tab
         onTap: (index) {
           setState(() {
