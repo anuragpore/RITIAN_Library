@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import '../Screens/Notifications.dart';
 import '../Screens/Dashboard.dart';
@@ -23,7 +24,7 @@ class _SettingState extends State<Setting> {
               size: 40,
             ),
             onPressed: () {
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Setting()),
               );
@@ -31,8 +32,33 @@ class _SettingState extends State<Setting> {
           ),
         ],
       ),
-      body: Center(
-        child: Text('Settings Screen'),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+                 children:<Widget>[
+                   Container(
+                     color: Colors.grey[100],
+                     child: Row(
+                       children: [
+                         Icon(Icons.person,size: 100,),
+                         Text("Akash Pachpute\n21030xx\nCSE\n2023-24",style: TextStyle(fontWeight: FontWeight.bold),),
+                       ],
+                     ),
+                   ),
+                     SizedBox(height: 20),
+                      Text("Account",style: TextStyle(color: Colors.grey,fontSize:20,fontWeight: FontWeight.bold),),
+                       ListTile(
+                         leading: Icon(Icons.person),
+                        title: Text("Update Academic Year"),
+                         onTap: (){
+
+                         },
+                       ),
+
+                 ],
+
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white, // Set background color to white
@@ -51,7 +77,7 @@ class _SettingState extends State<Setting> {
           ),
         ],
         currentIndex: _selectedIndex, // Current selected index
-        selectedItemColor: Colors.red, // Color for selected tab
+        selectedItemColor: Colors.blueAccent, // Color for selected tab
         unselectedItemColor: Colors.grey, // Color for unselected tab
         onTap: (index) {
           setState(() {
@@ -59,19 +85,19 @@ class _SettingState extends State<Setting> {
           });
           switch (index) {
             case 0:
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Dashboard()),
               );
               break;
             case 1:
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Notifications()),
               );
               break;
             case 2:
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Setting()),
               );

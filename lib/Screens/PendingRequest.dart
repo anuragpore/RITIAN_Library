@@ -15,6 +15,7 @@ class PendingRequestState extends State<PendingRequest> {
         title: Text('Research Paper Requests',style: TextStyle(fontWeight: FontWeight.bold),),
       ),
       body: ListView.builder(
+
         itemCount: papers.length,
         itemBuilder: (context, index) {
           return Card(
@@ -30,7 +31,7 @@ class PendingRequestState extends State<PendingRequest> {
           _showAddPaperDialog(context);
         },
         child: Icon(Icons.add),
-        backgroundColor: Colors.red,
+        backgroundColor: Colors.blueAccent,
       ),
     );
   }
@@ -40,9 +41,11 @@ class PendingRequestState extends State<PendingRequest> {
     TextEditingController idController = TextEditingController();
 
     showDialog(
+
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
+
           title: Text('Add Research Paper'),
           content: Column(
             mainAxisSize: MainAxisSize.min,

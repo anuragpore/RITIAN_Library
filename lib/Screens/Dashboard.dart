@@ -43,7 +43,7 @@ class _DashboardState extends State<Dashboard> {
               decoration: BoxDecoration(
                 border: Border.all(color: Colors.transparent),
                 borderRadius: BorderRadius.circular(0),
-                color: Colors.red
+                color: Colors.blueAccent
               ),
               padding: EdgeInsets.all(20.0),
               child: Column(
@@ -155,7 +155,7 @@ class _DashboardState extends State<Dashboard> {
           ),
         ],
         currentIndex: _selectedIndex, // Current selected index
-        selectedItemColor: Colors.red, // Color for selected tab
+        selectedItemColor: Colors.blueAccent, // Color for selected tab
         unselectedItemColor: Colors.grey, // Color for unselected tab
         onTap: (index) {
           setState(() {
@@ -163,19 +163,19 @@ class _DashboardState extends State<Dashboard> {
           });
           switch (index) {
             case 0:
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Dashboard()),
               );
               break;
             case 1:
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Notifications()),
               );
               break;
             case 2:
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Setting()),
               );

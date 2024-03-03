@@ -35,7 +35,7 @@ class _NotificationsState extends State<Notifications> {
         child: Text('Notifications Screen'),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white, // Set background color to white
+        // Set background color to white
         items: [
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard),
@@ -51,7 +51,7 @@ class _NotificationsState extends State<Notifications> {
           ),
         ],
         currentIndex: _selectedIndex, // Current selected index
-        selectedItemColor: Colors.red, // Color for selected tab
+        selectedItemColor: Colors.blueAccent, // Color for selected tab
         unselectedItemColor: Colors.grey, // Color for unselected tab
         onTap: (index) {
           setState(() {
@@ -59,19 +59,19 @@ class _NotificationsState extends State<Notifications> {
           });
           switch (index) {
             case 0:
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Dashboard()),
               );
               break;
             case 1:
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Notifications()),
               );
               break;
             case 2:
-              Navigator.pushReplacement(
+              Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Setting()),
               );
